@@ -57,22 +57,22 @@ very cutesy very my WIFE. I'll always be right here for you cause my love for yo
   </div>
 
   <script>
-    const pages = document.querySelectorAll('.page');
-    let current = 0;
+  const pages = document.querySelectorAll('.page');
+  let current = 0;
 
-    pages.forEach((page, index) => {
+  pages.forEach((page, index) => {
+    if (index < pages.length - 1) { // Only add click for pages 1–3
       page.addEventListener('click', () => {
         if (index === current) {
           page.classList.add('flipped');
           current++;
         }
       });
-    });
+    }
+  });
 
-    document.getElementById('resetBtn').addEventListener('click', () => {
-      pages.forEach(page => page.classList.remove('flipped'));
-      current = 0;
-    });
-  </script>
-</body>
-</html>
+  document.getElementById('resetBtn').addEventListener('click', () => {
+    pages.forEach(page => page.classList.remove('flipped'));
+    current = 0;
+  });
+</script>
