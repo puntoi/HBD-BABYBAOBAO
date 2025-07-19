@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Baby Baoao's Greeting Card</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="notebook">
+
+    <!-- Page 1 - Cover -->
+    <div class="page cover" id="page1">
+      <div class="title">
+        <h1> Happy Birthday Baby! 🎂 </h1>
+        <h3> Fuck me!! 👉👌</h3>
+        <p>👅 Touch me here 👅</p>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page paper" id="page2">
+      <h2>Hi baby, 😚</h2>
+      <p>Today is your day. Smile big, laugh loud, and celebrate hard! always 
+        remember that You’re my today and all of my tomorrows. Happy birthday, my love! 🎂💘
+      </p>
+      <p class="from">— Your Forever Baby</p>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="page paper" id="page3">
+      <p>I just want you to know na ano hehe like how much you mean to me. You’ve brought so much light, 
+        peace, and happiness into my life. You inspire me to be better every day. I’ll always be grateful for your love, 
+        your presence, your affection, and the way you make even the simplest moments feel special.
+        No matter what life brings, I'll always be here to love you, support you, and grow with you. You’re not just my girlfriend 
+        you’re my home, my heart, and my future.
+        I love you more than words can say. 
+    </div>
+
+    <!-- Page 4 -->
+    <div class="page paper" id="page4">
+        <h2>LETS FUCKKK!!!👉👌</h2>
+      <p>I'LL FUCK YOU HARD I'LL FUCK YOU HARD I'LL FUCK YOU HARD I'LL FUCK YOU HARD I'LL FUCK YOU HARD I'LL FUCK YOU HARD 
+        I'LL FUCK YOU HARD I'LL FUCK YOU HARD  I'LL FUCK YOU HARD I'LL FUCK YOU HARD!!!</p>
+        <p class="from">— Your Daddy</p>
+      
+    </div>
+   
+<div class="page paper" id="page5">
+  <h2>Keep on Smiling 🥰</h2>
+  <p>
+    I know there's hardships in life na darating pa sa life but don't forget to smile cos ang ganda ganda ng smile mo eh
+very cutesy very my WIFE. I'll always be right here for you cause my love for you is very big like dinosaur ror 🦖</p>
+  <button id="resetBtn"> Reset</button>
+</div>
+    
+  </div>
+
+  <script>
+    const pages = document.querySelectorAll('.page');
+    let current = 0;
+
+    pages.forEach((page, index) => {
+      page.addEventListener('click', () => {
+        if (index === current) {
+          page.classList.add('flipped');
+          current++;
+        }
+      });
+    });
+
+    document.getElementById('resetBtn').addEventListener('click', () => {
+      pages.forEach(page => page.classList.remove('flipped'));
+      current = 0;
+    });
+  </script>
+</body>
+</html>
